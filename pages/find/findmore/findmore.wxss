@@ -1,0 +1,152 @@
+/* pages/find/findmore/findmore.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.shoplist{
+  width: 100%;
+  background: #fff;
+  height: 100%;
+}
+#box-wrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.box-mask{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+}
+.mask{ 
+  position: fixed;
+  left: 0;
+  top: 0;
+  width:100%;
+  height: 50%;
+  background: #fff;
+  z-index: 999;
+  opacity: 1;
+}
+.nav{
+  width: 100%;
+  overflow-y: scroll;
+  white-space: nowrap;
+  height: 80rpx;
+  background: #0085ff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.nav::-webkit-scrollbar {display:none}
+.nav view{
+  display: inline-block;
+  margin: 0 20rpx;
+  padding: 4rpx 0;
+  color: #fff;
+  opacity: .7;
+}
+#active{
+  opacity: 1;
+  border-bottom: 4rpx solid #fff;
+}
+.shop{
+  width: 100%;
+  height: 1134rpx;
+  overflow: auto;
+}
+.shops{
+  display: flex;
+  overflow: hidden;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+}
+.shops .left{
+  width: 140rpx;
+}
+.shops .left image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.shops .right{
+  flex: 1;
+  font-size: 24rpx;
+  color: #666;
+}
+.shops .right view {
+  margin-bottom: 16rpx;
+}
+.shops .right .name{
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+}
+.shops .right .name text{
+  display: inline-block;
+  padding: 4rpx 6rpx;
+  font-size: 24rpx;
+  color: #6f3f15;
+  background: #fff100;
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+.one .peixong{
+  display: inline-block;
+  background: #0097ff;
+  color:#fff;
+  float: right;
+  font-size: 20rpx;
+  padding: 4rpx 6rpx;
+  border-radius: 4rpx;
+}
+.two .time{
+  float: right;
+  font-size: 20rpx;
+}
+.three{
+  color: rgb(232, 71, 11);
+  font-size: 20rpx;
+}
+.four{
+  font-size: 22rpx;
+  overflow: hidden;
+}
+.four text,.four view{
+  display: inline-block;
+}
+.four .icon_color{
+  display: inline-block;
+  padding: 2rpx 4rpx;
+  font-size: 22rpx;
+  color: #fff;
+  margin-right:10rpx;
+  border-radius: 6rpx;
+  float: left;
+}
+.four .tips{
+  float: left;
+  width: 380rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.four .huodong{
+  float: right;
+  margin-right: 5rpx;
+  color: #999;
+}
+.rotates{
+  display:inline-block;
+  transition: all 1s ease;
+}
+.rotate{
+  transform: rotate(-180deg);
+}

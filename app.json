@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/findmore/findmore",
+    "pages/index/foods/foods-star",
+    "pages/find/find",
+    "pages/order/order",
+    "pages/find/shopdetail/shopdetail",
+    "pages/home/home",
+    "pages/home/login/login",
+    "pages/home/userinfo/userinfo",
+    "pages/index/foods/foods-start",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "饿了么",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/elm.png",
+        "selectedIconPath": "images/icon/elm-select.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/icon/find.png",
+        "selectedIconPath": "images/icon/find-select.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/icon/order.png",
+        "selectedIconPath": "images/icon/order-select.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home-select.png"
+      }
+    ]
+  }
+}

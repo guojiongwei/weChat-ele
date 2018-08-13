@@ -1,0 +1,32 @@
+/* pages/find/shopdetail/shopdetail.wxss */
+.detail{
+  width: 100%;
+  background: #fff;
+}
+.top{
+  width: 100%;
+  height: 120rpx;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rpx;
+  box-sizing: border-box;
+  border-bottom: 4rpx solid #eee;
+}
+.nav text{
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  height: 100%;
+  color: #666;
+  padding: 0 10rpx;
+}
+.active{
+  color: #000;
+  font-weight: 700;
+  border-bottom: 4rpx solid #2395ff;
+}

@@ -1,0 +1,82 @@
+/* pages/home/home.wxss */
+.user{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.user_top{
+  width: 100%;
+  height: 300rpx;
+  background: #0097fe;
+  box-sizing: border-box
+}
+.top_left{
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+.header_img{
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  margin-top:75rpx;
+  border-radius: 50%;
+}
+.top_right{
+  width: 60%;
+  height: 100%;
+  color: #fff;
+  float: left;
+  padding: 120rpx 0 0 0rpx;
+  box-sizing: border-box;
+}
+.tel{
+  font-size: 24rpx;
+}
+.user_money{
+  height: 160rpx;
+  background: #fff;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+}
+.user_money view{
+  flex:1;
+  border-right: 1px solid #e5e5e5;
+  padding-top:20rpx;
+}
+.user_money view:nth-of-type(3){
+  border: 0
+}
+.user_money view text{
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+}
+.user_money view text:nth-of-type(2){
+   font-size: 24rpx;
+}
+.setlist{
+  background: #fff; 
+  font-size: 30rpx;
+  border-top:1rpx solid #e5e5e5; 
+  margin-top:20rpx;
+}
+.setlist view{
+  padding: 0 30rpx;
+  border-bottom:1rpx solid #e5e5e5; 
+  display: flex;
+  line-height: 90rpx;
+}
+.setlist view icon,.setlist view text{
+  flex: 1
+}
+.setlist view icon:nth-of-type(2){
+  flex: 4;
+  text-align: right
+}
+.setlist view text{
+  flex: 4;
+  text-align:left;
+}

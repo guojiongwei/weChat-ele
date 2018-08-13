@@ -1,0 +1,49 @@
+<!--pages/find/findmore/findmore.wxml-->
+<view class='shoplist'>
+  <view id='box-wrap' wx:if="{{maskShow}}">
+    <view class='box-mask'  catchtap='hide'>
+    </view>
+    <view class='mask'>
+    </view>
+  </view>
+  
+  <view class='nav'>
+    <block wx:for="{{shopkind}}" wx:key="index">
+      <view id="{{index == kindId ? 'active' : ''}}" bindtap='kind' data-index='{{index}}' data-item='{{item}}'>{{item.name}}</view>
+    </block>
+  </view>
+  <view class='sort'><text bindtap='shows'>时间</text><text>最近</text></view>
+  <scroll-view scroll-y class='shop'  bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <navigator class='shops' wx:for="{{shoplist}}" wx:key="{{index}}" url="{{'/pages/find/shopdetail/shopdetail?id='+item.restaurant.id+'&latitude='+item.restaurant.latitude+'&longitude='+item.restaurant.longitude}}">
+    <view class='left'>
+      <image src='{{item.restaurant.image_path}}'></image>
+    </view>
+    <view class='right'>
+      <view class='name'>
+        <text>品牌</text>
+        {{item.restaurant.name}}
+      </view>
+      <view class='one'>
+        <view style='display:inline-block;width:{{item.restaurant.rating*32}}rpx;background:yellow;' class='icon-pingfen iconfont'></view>
+        <text>{{item.restaurant.rating}}</text>
+        <text>月售{{item.restaurant.recent_order_num}}单</text>
+        <text class='peixong'>蜂鸟专送</text>
+      </view>
+      <view class='two'>
+        <text>￥{{item.restaurant.float_minimum_order_amount}}起送 |</text>
+        <text> 配送费￥{{item.restaurant.float_delivery_fee}}</text>
+        <text class='time'>{{item.restaurant.distance/1000}}km | {{item.restaurant.order_lead_time}}分钟</text>
+      </view>
+      <view class='three'><icon style='font-size:10px;margin-right:2px' class='icon-koubei iconfont' /> 口碑人气好店</view>
+      <view class='four' wx:for='{{item.restaurant.activities}}' wx:for-index="i"  wx:for-item="items" wx:key='i' wx:if="{{item.isShow==false ? i<2 : true}}" >
+        <text class='icon_color' style='background: #{{items.icon_color}}'>{{items.icon_name}}</text>
+        <text class='tips'>{{items.tips}}</text>
+        <text class='huodong' wx:if='{{i == 0}}' data-index='{{index}}' catchtap='show'>
+        <text wx:if="{{item.restaurant.activities.length > 2}}">{{item.restaurant.activities.length}}个活动</text>
+            <text wx:if="{{item.restaurant.activities.length > 2}}" class="iconfont icon-sanjiao_xia rotates {{item.isShow == false ? '' : 'rotate'}}"></text>
+        </text>
+      </view>
+    </view>
+    </navigator>
+  </scroll-view>
+</view>

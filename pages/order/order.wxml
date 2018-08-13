@@ -1,0 +1,4 @@
+<!--pages/order/order.wxml-->
+<text>订单</text>
+<button bindtap='ss'>ssssss</button>
+<image src="{{tempFilePaths}}"></image>

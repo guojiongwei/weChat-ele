@@ -1,0 +1,50 @@
+<!--pages/find/find.wxml-->
+<view class='find'>
+<view class='top_banner'>
+<image style='height:220rpx' src='https://fuss10.elemecdn.com/5/89/b73f015f9b22dfdd17a4145b2f0fbgif.gif'></image>
+</view>
+<swiper indicator-dots="{{true}}" indicator-active-color="rgb(0, 152, 251)"
+  autoplay="{{true}}" duration="{{300}}">
+  <block wx:for="{{foodkind}}" wx:key='index'>
+    <swiper-item class='slider'>
+    <block wx:for="{{item}}" wx:key='index'>
+    <navigator class='nav' url="/pages/find/findmore/findmore">
+     <image src="{{item.image_hash}}"></image> 
+    <view>{{item.name}}</view>
+    </navigator>
+    </block>
+    </swiper-item>
+  </block>
+</swiper>
+  <view class='discover'>
+    <view wx:for='{{discover}}' wx:key='index' class='item'>
+        <view class='dis_left'>
+          <text style='color:{{ item.title_color}};font-size:34rpx'>{{item.title}}</text> <br/>
+          <text style='font-size:24rpx;color:#999'>{{item.subtitle}}</text>
+        </view>
+        <view class='dis_right'>
+          <image src='{{item.main_pic_hash}}'></image>
+        </view>
+    </view>
+  </view>
+  <view class='find_xianshi'>
+    <view class='title'>
+      <text>限时好礼</text>
+      <text>金币换好礼</text>
+    </view>
+    <view class='find_box'>
+      <view class='find_list' wx:for="{{xianshi}}"  wx:key='index'>
+        <view class='tag'>{{item.corner_marker}}</view>
+        <!-- <view >{{item.original_price}}</view> -->
+        <view>
+          <image src='{{item.image_hash}}'></image>
+        </view>
+        <view>
+          <view class='titles'>{{item.title}}</view>
+          <view class='price'><text>{{item.points_required}}</text><text>{{item.original_price}}金币</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <navigator url='/pages/find/findmore/findmore' class='find_more'>查看更多></navigator>
+</view>

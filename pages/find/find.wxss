@@ -1,0 +1,132 @@
+/* pages/find/find.wxss */
+.find{
+  width: 100%;
+}
+.top_banner{
+  width: 100%;
+}
+.top_banner image{
+  width: 100%;
+}
+swiper .slider{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #fff;
+}
+swiper .slider .nav{
+  width: 25%;
+  text-align: center;
+} 
+swiper .slider .nav image{
+  width: 90rpx;
+  height: 90rpx;
+} 
+swiper .slider .nav view{
+ font-size: 24rpx;
+ color: #666;
+} 
+.discover{
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #e5e5e5;
+}
+.discover .item{
+  width: 50%;
+  height: 160rpx;
+  float: left;
+  background: #fff;
+  box-sizing: border-box;
+  padding:20rpx 30rpx;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.discover view view{
+  float: left;
+}
+.discover .dis_left{
+  width: 70%;
+}
+.discover .dis_left text{
+  display: inline-block;
+  width: 100%;
+}
+.discover .dis_right{
+  width: 30%;
+}
+.item:nth-of-type(1){
+  height: 320rpx;
+}
+.item:nth-of-type(1) .dis_right{
+  float: right;
+  width: 100%;
+  height: 240rpx;
+  text-align: right;
+}
+.discover view image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.item:nth-of-type(1) .dis_right image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-top:60rpx;
+}
+.find_xianshi{
+  width: 100%;
+  background: #fff
+}
+.find_xianshi .title{
+  width: 100%;
+  height: 100rpx;
+}
+.find_xianshi .title text{
+  display: block;
+  text-align: center;
+}
+.find_xianshi .title text:nth-of-type(2){
+  font-size: 30rpx;
+  color: #999;
+}
+.find_box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.find_box .find_list{
+  width: 33%;
+  text-align: center;
+  position: relative;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.find_box .find_list image{
+  width: 220rpx;
+  height: 222rpx
+}
+.find_box .find_list .tag{
+  position: absolute;
+  top:20rpx;
+  left: 20rpx;
+  font-size: 20rpx;
+  background: #413d3c;
+  color: #fff;
+  padding: 6rpx;
+}
+.find_box .find_list .titles{
+  color: #666;
+  font-size: 24rpx;
+}
+.find_box .find_list .price{
+  display: inline-block;
+  color: #666;
+  font-size: 24rpx;
+  color: #ff5339;
+}
+.find_more{
+  background: #fff;
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+  padding: 20rpx;
+}

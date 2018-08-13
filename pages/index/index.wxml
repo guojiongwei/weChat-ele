@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<import src="./foods/foods-star.wxml" />
+<view class="container">
+  <view class="head">
+    <view class="address-wrapper">
+    <image src="../../images/icon/map-icon.png"></image>
+      <text class="address-text">选择收货地址</text>
+    </view>
+    <view class="search-wrapper">
+      <image src="../../images/icon/search-icon.png" class="search-icon"></image>
+      <input placeholder='搜索商家、商品名称'></input>
+    </view>
+  </view>
+  <view class="slider-banner">
+    <image src="../../images/index/banner.png"></image>
+  </view>
+  <view class="foods-active">
+    <div class="foods-active-item">
+      <image src="../../images/index/foods-active.png"></image>
+    </div>
+    <div class="foods-active-item">
+      <image src="../../images/index/foods-active.png"></image>
+    </div>
+    <div class="foods-active-item">
+      <image src="../../images/index/foods-active.png"></image>
+    </div>
+  </view>
+  <view class="foods-list">
+    <!-- <view class="foods-list-head">
+      <!-- <view class="sort-wrap">
+        <view class="mb">
+          <view class="sort-model">
+            <view class="sort-head">
+              <view>综合排序</view>
+              <view>好评优先</view>
+              <view>距离最近</view>
+              <view>筛选</view>
+            </view>
+            <view class="sort-info">
+              <view>综合排序</view>
+              <view>起送价最低</view>
+              <view>配送速度最快</view>
+              <view>评分最高</view>
+              <view>好评优先</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="sort">综合排序</view>
+      <view class="sort">销量最高</view>
+      <view class="sort">距离最近</view>
+      <view class="sort"><text>筛选</text></view> 
+    </view> -->
+    <view class="foods-list-main">
+      <view class="foods-list-wrap" wx:for="{{home_rank}}" wx:for-index="index" wx:for-item="item_rank" wx:key="index">
+        <view class="item-top">
+          <view class="logo"><image src="{{item_rank.restaurant.image_path}}"></image></view>
+          <view class="info">
+            <view class="info-item">
+              <view class="title">
+                <text class="title-text">{{item_rank.restaurant.name}}</text>
+              </view>
+            </view>
+            <view class="info-item info-item-mid">
+              <view class="star-wrap">
+                <template is="star" data="{{...item_rank, starProcess:item_rank.rating}}"/>
+                <view class="sale"><text>月售{{item_rank.restaurant.recent_order_num}}单</text></view>
+              </view>
+              <view class="logistics">
+                <!-- <view class="logistics-time">准时达</view> -->
+                <view class="logistics-type" wx:if="{{item_rank.restaurant.delivery_mode.text}}">{{item_rank.restaurant.delivery_mode.text}}</view>
+              </view>
+            </view>
+            <view class="info-item">
+              <text>￥{{item_rank.restaurant.float_minimum_order_amount}}元起送 | 配送费￥{{item_rank.restaurant.float_delivery_fee}}</text>
+              <text>{{item_rank.restaurant.distance/1000}}km | {{item_rank.restaurant.order_lead_time}}min</text>
+            </view>
+          </view>
+        </view>
+        <view class="item-mid">
+          <view class="item-mid-active" wx:for="{{item_rank.restaurant.activities}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" wx:if="{{item_rank.isShow == false ? idx<2 : true}}">
+            <view><view class="icon-name" style="background: #{{item.icon_color}}">{{item.icon_name}}</view><text>{{item.description}}</text></view>
+            <view  data-index='{{index}}' bindtap="showMore"wx:if="{{item_rank.restaurant.activities.length>2 && idx == 0}}"><text>{{item_rank.restaurant.activities.length}}个活动</text><view class="iconfont icon-sanjiao_xia {{item_rank.isShow? 'isrotate': ''}}"></view></view>
+          </view>
+          <!-- <view class="item-mid-active"><text class="reduce">满1000减1元</text></view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

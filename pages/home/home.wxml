@@ -1,0 +1,74 @@
+<!--pages/home/home.wxml-->
+<view class='user'>
+<!-- 个人信息 -->
+  <navigator url="/pages/home/login/login" hover-stay-time='0' class='user_top' wx:if="{{userinfo.nickName.length == 0}}">
+    <view class='top_left'>
+    <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAM1BMVEXE5/XI6fbT7fjW7/jl9fvw+f3////a8Pnt+PzL6vb7/v7i8/rP7Pf4/P7e8vn0+/3p9vvI4mwRAAACI0lEQVR4Ae3YBxbkIAgGYDCKgqbc/7LbS5hJexvMNr7Xp/0j9oBzzjnnnHPOuX8Qhq/wycwhJvopxQGfSM2F3pXcOZuj0DaJDN1gpSMRoY9B6Jhk6AALnSsI1tpIV0jrX+ZHyp3putwzN9XA8BmHmvolN1LGCWENp5GUADZYVGyGd1lFC4OJmVYqbKu0MoOFem22TPrv3cf004ywa6A1htvStdw2Go+vcC03C5EuzV3pSv/iQsqCllN4gj1tJmWC+342JV1dx8cGBuR8nEbznVHNkQW28UxKBeV+pRtsCrrMEsDGeLIIVlISgg08HqiYSIlgJRxWuoku8wA2VCU3dwVlZugQnE4PnYt+t05wR6FvysmeIPltrC8mC3U97t65bRQq9whO23uC6gRp9sFMa9NOJ8z2wWF3T1BvDfdXzLLb4oL7a1m9P53mq50PwSR42ltA2v6eEC2uFGH38Ja39wRVDUGDTSJudH+ETSg3G6wuESO8anxSpww3xF+aGvX+yWvQZ72rohQ0O+wFeI6q9QiPYr0cPGih31Rs1pfjBy2/KxnlYjJPtTYwNFy7CE5CnyzGxf4pMWzhQkTWyTjTWkV4hVW6PNhjIWUZdF+okgiDnSakSakhMHAItQhpAXom7xN+8nG1OnTawkRXJARzlc5V6KElOpYadJJH2jdm6CjPtG3O0FmL780eY4MncI5J6CtJMTM8iwODc84555xzzv0PPgKMKi2olgNo0QAAAABJRU5ErkJggg==' class='header_img' ></image>
+    <img />
+    </view>
+    <view class='top_right'>
+      <view >登录/注册</view>
+      <view class='tel'>登陆后可享受更多特权</view>
+      <icon style='position:absolute;right:20rpx;top:130rpx;font-size:20px;' class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+  </navigator>
+  <navigator url="/pages/home/userinfo/userinfo" hover-stay-time='0' class='user_top'  wx:if="{{userinfo.nickName.length != 0}}">
+    <view class='top_left'>
+    <image src='{{userinfo.avatarUrl}}' class='header_img' ></image>
+    <img />
+    </view>
+    <view class='top_right' >
+      <view>{{userinfo.nickName}}</view>
+      <view class='tel iconfont icon-shouji'>18530633992</view>
+      <icon style='position:absolute;right:20rpx;top:130rpx;font-size:20px;' class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+  </navigator>
+<!-- 个人资产 -->
+  <view class='user_money'>
+    <view>
+      <text style='color: rgb(0, 152, 251)'>0元</text>
+      <text>余额</text>
+    </view>
+    <view>
+      <text style='color: rgb(255, 95, 62)'>0元</text>
+      <text>红包</text>
+    </view>
+    <view>
+      <text style='color: rgb(106, 194, 11);'>26个</text>
+      <text>金币</text>
+    </view>
+  </view>
+  <!-- 设置 -->
+  <view class='setlist'>
+    <view> 
+        <icon style='color: rgb(0, 152, 251)' class='iconfont icon-weizhi'></icon>
+        <text>收货地址</text>
+        <icon class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+  </view>
+  <view class='setlist'>
+    <view> 
+      <icon style='color:rgb(148, 217, 74);' class='iconfont icon-qiahao'></icon>
+      <text>金币商城</text>
+      <icon class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+    <view> 
+      <icon style='color:rgb(252, 123, 83)' class='iconfont icon-fuwuzhongxin'></icon>
+      <text>分享拿五元现金</text>
+      <icon class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+  </view>
+  <view class='setlist'>
+    <view> 
+      <icon style='color:rgb(0, 152, 251)' class='iconfont icon-fuwuzhongxin'></icon>
+      <text>我的客服</text>
+      <icon class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+    <view> 
+      <icon style='color:rgb(0, 152, 251);font-size:25px' class='iconfont icon-changyonglogo40'></icon>
+      <text>下载饿了么APP</text>
+      <icon class='iconfont icon-moreinfo-copy'></icon>
+    </view>
+  </view>
+  <button open-type="openSetting">打开授权设置页</button>
+</view>

@@ -1,0 +1,218 @@
+/**index.wxss**/
+@import "./foods/foods-star.wxss";
+.head {
+  display: flex;
+  height: 29.62vw;
+  background-color: #0089dc;
+  padding: 0 3.73vw;
+  flex-wrap: wrap;
+}
+.head .address-wrapper {
+  flex: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.head .address-wrapper image {
+  width: 16px;
+  height: 16px;
+}
+.address-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+}
+.search-wrapper {
+  width: 100%;
+  position: relative;
+}
+.search-wrapper .search-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 2vw;
+  left: 24.7vw;
+}
+.search-wrapper input {
+  background-color: #fff;
+  height: 10.08vw;
+  border-radius: 50px;
+  font-size: 24rpx;
+  text-align: center;
+}
+.slider-banner {
+  display: flex;
+}
+.slider-banner image {
+  width: 100%;
+  height: 42.59vw;
+}
+.foods-active {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  height: 37.03vw;
+  margin-top: 10px;
+  padding: 0 4.2vw;
+
+}
+.foods-active .foods-active-item {
+   flex: 1;
+   height: 28.7vw;
+   margin-right: 2.77vw;
+}
+.foods-active .foods-active-item:nth-last-child(1) {
+  margin-right: 0;
+}
+.foods-active .foods-active-item image {
+   width: 100%; 
+   height: inherit;
+   border-radius: 20px;
+}
+.foods-list {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+}
+.foods-list .foods-list-head {
+  display: flex;
+  height: 10.08vw;
+  line-height: 10.08vw;
+  border: 1px solid #f7f7f7;
+}
+.foods-list .foods-list-head .sort {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+}
+/*排序弹出框  */
+.sort-wrap .mb {
+  position: fixed; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 3;
+}
+.sort-model {
+  /* display: flex; */
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  font-size: 28rpx;
+  z-index: 999;
+  top: 0；
+}
+.sort-head {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.sort-head view {
+  flex: 1;
+}
+.sort-info view{
+   display: flex; 
+   flex: 1;
+   text-align: center;
+   padding: 0 5vw;
+}
+.foods-list .foods-list-wrap {
+  border-bottom: 1px solid #bbb7b7;
+  padding: 0 4.166vw 4.63vw 4.166vw;
+}
+.foods-list .item-top {
+  display: flex;
+  padding-top: 1vw;
+  padding-bottom: 0.46vw;
+}
+.foods-list .logo {
+  width: 16.66vw;
+  height: 16.66vw;
+  border: 1px solid #bbb7b7;
+}
+.foods-list .logo image {
+  width: 100%;
+  height: inherit;
+}
+.foods-list .info {
+  width: 69.9vw;
+  margin-left: 2.7vw;
+  padding-bottom: 2vw;
+  border-bottom: 1px dashed #bbb7b7;
+}
+.foods-list .title {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #333;
+}
+.foods-list .title .title-text::before {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  content: "品牌";
+  height: 20px;
+  padding: 0 4px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #ffe339;
+  border-radius: 5px;
+  color: #6f3f15;
+  margin-right: 5px;
+}
+.foods-list .info-item {
+  display: flex;
+  margin-top: 1.85vw;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.foods-list .star-wrap {
+  display: flex;
+}
+.foods-list{
+  font-size: 24rpx;
+  color: #999;
+}
+.logistics-time,.logistics-type {
+  border: 1px solid #0089dc;
+  color: #0089dc;
+  border-radius: 5px;
+  font-size: 24rpx;
+  text-align: center;
+  float: left;
+  padding: 0 2px;
+}
+.logistics-type {
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #0089dc;
+  margin-left: 5px;
+}
+.item-mid-active {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 19.36vw;
+  margin-top: 1.85vw;
+}
+.item-mid-active .icon-sanjiao_xia{
+  transition: .5s;
+  float: right;
+}
+.item-mid-active .icon-name {
+  float: left;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  line-height: 16px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.isrotate {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,31 @@
+/* pages/index/foods/foods-start.wxss */
+.star {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.starTmp {
+  width:14.80vw;
+  position: relative;
+}
+.star-default,.star-active{
+  width: 100%;
+  float: left;
+}
+.star-active {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.star-default image,.star-active image {
+  width: 14.81vw;
+  height: 2.47vw
+}
+.score {
+  font-size: 24rpx;
+  color: #999;
+}
